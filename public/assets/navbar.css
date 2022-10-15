@@ -1,0 +1,41 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: inline;
+    float: left;
+    padding: 12px;
+    font-size: larger;
+    font-family: 'Poppins', sans-serif;
+}
+
+li a {
+    display: block;
+    color: lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+a{
+    display: block;
+    padding: 8px;
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+  }
+
+#main{
+    margin-top: 50px;
+  }
