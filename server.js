@@ -1,35 +1,32 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const MongoClient  = require('mongodb').MongoClient;
+require("dotenv").config();
 
-app.set('view engine', 'ejs')
+
+const uri = process.env.CONNECTION_STRING;
+console.log(MongoClient)
+const client = new MongoClient(uri, {useNewUrlParser: true});
+const collection = client.db('ratemyitinerary').collection('itineraries');
+
+app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
 //Routes
 app.get('/', (req, res) => {
-    res.render('index', {text: "World"})
+    res.render('index', {text: "World"});
 })
 
-//Get most homepage most popular itineraries
+//Get most most popular itineraries (top 3)
 app.get('/getMostPop', (req, res, next) => {
-    //send back the 6 most popular itineraries
-    // if on homepage, send back the 6 most pop in general
-    // if searched, send back searches 6 most pop
-    // all based on ratings
-    res.send('Most Popular')
+    collection.find().sort({rating: 1}).toArray().then(result => res.render('index', {data: result}));
+})
+
+// const itinerariesRouter = require('./routes/itineraries');
+// app.use('/itineraries', itinerariesRouter);
+
+app.listen(3000, () => {
+    console.log("Server started on port 3000");
 })
 
 
-const itinerariesRouter = require('./routes/itineraries')
-app.use('/itineraries', itinerariesRouter)
-
-// //Post to create an itinerary
-// app.post('/shameek', (req, res, next) => {
-//     res.send('test')
-// })
-
-// //Delete an Itinerary 
-// app.delete('/shameek', (req, res, next) => {
-//     res.send('test')
-// })
-
-app.listen(3000)

@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="../public/assets/navbar.css">
     </head>
     <body>
-        
         <div class="navbar">
             <ul>
                 <li><a href="landing.html">Home</a></li>
@@ -21,7 +20,7 @@
         <div class="container">
             <!-- CHANGE ACTION LATER -->
             <form action="https://www.google.com/search" method="get" class="search-bar">
-                <input type="text" placeholder="search anything" name="q">
+                <input type="text" placeholder="Find An Itenerary" name="q">
                 <button type="submit"><img src="../public/assets/images/search.png"></button>
             </form>
             <div id="title">Most Popular</div>
@@ -31,15 +30,15 @@
                       <img src="../public/assets/images/tokyo.jpg" alt="rover" />
                     </div>
                     <div class="card-body">
-                      <span class="tag tag-teal">Japan</span>
+                      <span class="tag tag-teal"><%=data[0]['location']%></span>
                       <h2>
-                        Why is Chaney so gay?
+                        <%=data[0]['title']%>
                       </h2>
                       <p>
-                        An exploration into Chaney's mind
+                        <%=data[0]['description']%>
                       </p>
                       <h5>
-                        4.2 &#9733 &#9733 &#9733 &#9733;
+                        <%=data[0]['rating']%> &#9733 &#9733 &#9733 &#9733 &#9733;
                       </h5>
                     </div>
                   </div>
@@ -48,15 +47,15 @@
                       <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" />
                     </div>
                     <div class="card-body">
-                      <span class="tag tag-purple">United States</span>
+                      <span class="tag tag-purple"><%=data[1]['location']%></span>
                       <h2>
-                        California
+                        <%=data[1]['title']%>
                       </h2>
                       <p>
-                        ur mother
+                        <%=data[1]['description']%>
                       </p>
                       <h5>
-                        4.2 &#9733 &#9733 &#9733 &#9733;
+                        <%=data[1]['rating']%> &#9733 &#9733 &#9733 &#9733;
                       </h5>
                     </div>
                   </div>
@@ -65,15 +64,15 @@
                       <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
                     </div>
                     <div class="card-body">
-                      <span class="tag tag-pink">Korea</span>
+                      <span class="tag tag-pink"><%=data[2]['location']%></span>
                       <h2>
-                        Seoul
+                        <%=data[2]['title']%>
                       </h2>
                       <p>
-                        kpop and bhop
+                        <%=data[2]['description']%>
                       </p>
                       <h5>
-                        4.2 &#9733 &#9733 &#9733 &#9733;
+                        <%=data[2]['rating']%> &#9733 &#9733 &#9733 &#9733;
                       </h5>
                     </div>
             </div>
