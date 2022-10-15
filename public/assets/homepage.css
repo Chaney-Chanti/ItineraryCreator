@@ -19,9 +19,18 @@
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+.topbar{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  max-width: 2000px;
+  width: 800px;
+}
+
 .search-bar{
-    width: 100%;
-    max-width: 700px;
+    width: 300%;
+    max-width: 800px;
     margin-top: 50px;
     background: rgba(255, 255, 255, 0.2);
     display: flex;
@@ -54,6 +63,24 @@
     background: #ffffff;
     cursor: pointer;
 }
+
+.add{
+  margin-left: 100px;
+  height: 60px;
+  width: 30%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  justify-content: center;
+  border: 0;
+}
+
+.fa-solid.fa-plus{
+  scale: 200%;
+}
+
 
 .wrapper{
     display: flex;
