@@ -14,7 +14,7 @@
         <div class="navbar">
             <ul>
                 <li><a href="landing.html">Home</a></li>
-                <li><a href="itenerary.html">Itenerary</a></li>
+                <li><a href="itinerary.ejs">Itenerary</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Account</a></li>
@@ -23,8 +23,8 @@
 
         <div class="container">
           <div class="topbar">
-            <form action="https://www.google.com/search" method="get" class="search-bar">
-                <input type="text" placeholder="Find An Itenerary" name="q">
+            <form action="/test" method="get" class="search-bar">
+                <input type="text" placeholder="Find An Itinerary" name="q">
                 <button type="submit"><img src="../public/assets/images/search.png"></button>
               </form>
                 <!-- <a href="" class="add">
@@ -133,7 +133,7 @@
             </div>
             <h1 id="title">Most Popular</h1>
             <div class="wrapper">
-                <div class="card">
+              <a href="/test" class="card">
                     <div class="card-header">
                       <img src="../public/assets/images/tokyo.jpg" alt="rover" />
                     </div>
@@ -149,8 +149,8 @@
                         <%=data[0]['rating']%> &#9733 &#9733 &#9733 &#9733 &#9733;
                       </h5>
                     </div>
-                  </div>
-                  <div class="card">
+                  </a>
+                  <a href="/test" class="card">
                     <div class="card-header">
                       <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" />
                     </div>
@@ -166,8 +166,8 @@
                         <%=data[1]['rating']%> &#9733 &#9733 &#9733 &#9733;
                       </h5>
                     </div>
-                  </div>
-                  <div class="card">
+                  </a>
+                  <a href="/test" class="card">
                     <div class="card-header">
                       <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
                     </div>
@@ -183,7 +183,8 @@
                         <%=data[2]['rating']%> &#9733 &#9733 &#9733 &#9733;
                       </h5>
                     </div>
-            </div>
+                  </a>
         </div>
     </body>
 </html>
+

@@ -26,6 +26,10 @@ app.get('/getMostPop', (req, res) => {
     // res.render('index', );
 })
 
+app.get('/test', (req, res, next) => { 
+    res.render('location');
+});
+
 app.listen(3000, () => {
     console.log("Server started on port 3000");
 })
