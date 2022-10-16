@@ -3,6 +3,8 @@ const { ConnectionClosedEvent } = require('mongodb');
 const app = express();
 const MongoClient  = require('mongodb').MongoClient;
 require("dotenv").config();
+var bodyParser = require('body-parser')
+app.use(bodyParser.json());
 
 const uri = process.env.CONNECTION_STRING;
 const client = new MongoClient(uri, {useNewUrlParser: true});
@@ -30,20 +32,17 @@ app.get('/itinerary', (req, res) => {
 
 //Add an itinerary to the database
 app.post('/create', (req, res) => {
-
     const docs = {
-        title: "formTitle",
-        type: "formType",
-        location: "formLocation",
-        duration: "formDuration",
-        budget: "formBudget",
-        description: "formDescription",
-        rating: "formRating",
-        image: "formImage"
-    };  
-
-    const result = collection.insertOne(docs).then(result => res.send(result.insertedId));
-    const del = collection.deleteOne(docs)
+        title: "autoTitle",
+        type: req.body['type'],
+        location: req.body['location'],
+        duration: req.body['duration'],
+        budget: "autoBudget",
+        description: req.body['description'],
+        rating: "autoRating",
+        image: "autoImage"
+    }; 
+    collection.insertOne(docs).then(result => res.send(result.insertedId));
 })
 
 app.listen(3000, () => {

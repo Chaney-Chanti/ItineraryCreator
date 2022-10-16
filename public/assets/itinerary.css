@@ -22,14 +22,12 @@
       border-radius: 15px;
       padding: 40px;
       box-sizing: border-box;
-      background: rgba(103, 129, 125, 0.918);
+      background: rgba(255, 255, 255, 0.918);
       box-shadow: 3.5px 3.5px 5px #cbced1, -3.5px -3.5px 5px rgba(197, 197, 197, 0.2);
       flex-direction: column;
       justify-content: flex-start;
       align-items: stretch;
   }
-
-
 
   .addplans{
     font-size: 35px;
@@ -42,7 +40,7 @@
   }
 
    input {
-    background: #d1d1d1;
+    background: #ffffff;
     padding: 10px;
     padding-left: 10px;
     height: 25px;
@@ -75,7 +73,7 @@
   .dropdown select{
     min-height: 30px;
     background: #d1d1d1;
-    border: 1px solid #a4bfd4;
+    border: 1px solid #000000;
     border-radius: 7px;
     width: 100%;
     cursor: pointer;
@@ -145,46 +143,6 @@
     
 }
 
-/* #bottomright {
-  position: absolute;
-  bottom: 100px;
-  right: 40px;
-  font-size: 25px;
-  font-weight: 400;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-}
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #9c3a3a;    
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #e48900;  
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #9c3a3a;
-} */
-
-
 .price {
   float: left;
   height: 46px;
@@ -211,17 +169,17 @@
   white-space:nowrap;
   cursor:pointer;
   font-size:30px;
-  color:#ccc;
+  color:rgb(255, 255, 255);
 }
 .price:not(:checked) > label:before {
   content: '$';
 }
 .price > input:checked ~ label {
-  color: rgb(0, 58, 0);    
+  color: rgb(0, 177, 0);    
 }
 .price:not(:checked) > label:hover,
 .price:not(:checked) > label:hover ~ label {
-  color: rgb(0, 58, 0); }
+  color: rgb(0, 184, 0); }
 
 .price > input:checked ~ label:hover,
 .price > input:checked ~ label:hover ~ label,
@@ -231,7 +189,7 @@
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   width: 85%;
-  background:#CC6666;
+  background:#37755d;
   border-radius:18px;
   border:0;
   cursor:pointer;
@@ -245,7 +203,7 @@
 }
 
 .submit:hover { 
-  background:#CC4949; }
+  background:#279412; }
 
   .submit{
   position: absolute;
@@ -265,7 +223,6 @@
     border-right: var(--borderWidth) solid var(--borderColor);
     
   }
-
 
   :root {
     --borderWidth: 7px;

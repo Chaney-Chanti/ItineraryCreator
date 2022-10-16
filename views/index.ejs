@@ -8,7 +8,7 @@
         <!-- <link rel="stylesheet" href="../public/assets/navbar.css"> -->
         <link rel="stylesheet" href="../public/assets/itinerary.css">
         <link rel="shortcut icon" href="/">
-
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     </head>
     <body>
         <div class="navbar">
@@ -56,19 +56,18 @@
           <div class="bg-modal" id="bg-modal">
             
             <div class="itenerary-container">
-              
+
                 <div class="close" onclick="closeForm()">+</div>
-                <div class="addplans">How was your trip?</div>
-              <form id="info" action="/" method="post">
+                <div class="addplans">Create an Itinerary!</div>
+
                 <div class="location">
-                        <label for="loc" class="loc-id"> Location</label>
-                        
-                        <input type="location-input" name="location" id="location" placeholder="Where?">
+                        <label for="loc" class="loc-id"> Location:</label>
+                        <input type="location-input" id="location" placeholder="Where?">
                 </div>
         
                 <div class="description-input" >
                     <label for="description-for">Description:</label>
-                    <input  id="description" type="text" placeholder="Enter description here...">
+                    <input id="description" type="text" placeholder="Enter description here...">
                 </div>
         
         
@@ -86,8 +85,8 @@
                 </div>
 
                 <div class="type" >
-                  <label class="dropdown" id="type">Type:
-                  <select>
+                  <label class="dropdown">Type:
+                  <select id="type">
                       <option value="roadtrip">roadtrip</option>
                       <option value="travel">travel</option>
                       <option value="over-sea">over sea</option>
@@ -97,9 +96,6 @@
                   </label>
               
               </div>
-
-
-        
                 <div class="price" id="bottomleft">Price <br>
                         <input type="radio" id="dollar3" name="price"value="3" />
                         <label for="dollar3" title="text"></label>
@@ -115,7 +111,36 @@
                 </div>
         
                 <div>
-                <input type="submit" value="Submit" class="submit"></input>
+                  <button type="submit" class="submit" onclick="getItineraryInput()">SUBMIT</button>
+                  <script>
+                    function getItineraryInput() {
+                      var location = document.getElementById("location").value;
+                      var description = document.getElementById("description").value;
+                      var element = document.getElementById("duration");
+                      var elementValues = element.value;
+                      var elementValue = element.options[element.selectedIndex].text;
+                      var duration = elementValue;
+                      element = document.getElementById("type");
+                      elementValues = element.value;
+                      elementValue = element.options[element.selectedIndex].text;
+                      var type = elementValue;
+                      data = {
+                        location: location,
+                        description: description,
+                        duration: duration,
+                        type, type,
+                      };
+                      axios.post('/create', {
+                        ...data
+                      })
+                        .then(function (response) {
+                        console.log(response);
+                      })
+                        .catch(function (error) {
+                        console.log(error);
+                      });
+                    }
+                  </script>
                 </div>
               </form>
             </div>
@@ -181,4 +206,3 @@
         </div>
     </body>
 </html>
-
