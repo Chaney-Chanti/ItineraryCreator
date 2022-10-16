@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Itinerary</title>
         <link rel="stylesheet" href="../public/assets/homepage.css">
-        <link rel="stylesheet" href="../public/assets/navbar.css">
+        <!-- <link rel="stylesheet" href="../public/assets/navbar.css"> -->
         <link rel="stylesheet" href="../public/assets/itinerary.css">
         <link rel="shortcut icon" href="/">
 
@@ -19,9 +19,12 @@
         </div>
 
         <div class="container">
+          <h1 class="brandname">
+            RateMyItinerary
+          </h1>
           <div class="topbar">
             <form action="" method="get" class="search-bar" onsubmit="getSearchResult()">
-              <input type="text" id="search" placeholder="Find An Itenerary">
+              <input type="text" id="search" placeholder="Find An Itinerary">
               <button type="reset" id="submitButton" onclick="getSearchResult()"><img src="../public/assets/images/search.png"></button>
               <script>
                 function getSearchResult() {
