@@ -1,0 +1,311 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.itenerary-header{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 90px;
+    text-align: center;
+    color:rgba(255, 255, 255, 0); 
+  }
+
+  .itenerary-container{
+      display: flex;
+      margin: auto;
+      position: relative;
+      width: 380px;
+      height: 500px;
+      border-radius: 15px;
+      padding: 40px;
+      box-sizing: border-box;
+      background: rgba(103, 129, 125, 0.918);
+      box-shadow: 3.5px 3.5px 5px #cbced1, -3.5px -3.5px 5px rgba(197, 197, 197, 0.205);
+      flex-direction: column;
+      justify-content:baseline;
+      align-items: stretch;
+    
+  }
+
+
+
+  .addplans{
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-top: -28px;
+    margin-bottom: 5px;
+
+  }
+
+   input {
+    background: #d1d1d1;
+    padding: 10px;
+    padding-left: 10px;
+    height: 25px;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: inset 1.5px 1.5px 1.5px #87898b80, inset -1.5px -1.5px 1.5px rgba(119, 119, 119, 0.295);
+    text-align: left;
+
+  
+    width: 100%;
+    height: 50px;
+    padding: 1;
+    border:#333;
+    outline:#333;
+    box-sizing: border-box;
+  }
+
+ 
+
+  .input{
+    font-size:20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
+
+   .checked {
+    color: orange;
+  }
+
+  .dropdown{
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    
+  }
+
+  .dropdown select{
+    min-height: 30px;
+    background: #d1d1d1;
+    border: 1px solid #a4bfd4;
+    border-radius: 7px;
+    width: 100%;
+    cursor: pointer;
+    
+  }
+
+  .mastercard{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    margin-top: -10px;
+  }
+
+
+.location{
+    padding-top: -5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+  #type{
+    padding-top: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #duration{
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #description{
+    padding-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1px;
+  }
+  
+  .mastercard{
+    
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.rate {
+    float:right;
+    height: 46px;
+    padding: 0 10px;
+    
+}
+
+#bottomright {
+  position: absolute;
+  bottom: 100px;
+  right: 40px;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #9c3a3a;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #e48900;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #9c3a3a;
+}
+
+
+.price {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+
+#bottomleft {
+  position: absolute;
+  bottom: 100px;
+  left: 45px;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.price:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.price:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.price:not(:checked) > label:before {
+  content: '$';
+}
+.price > input:checked ~ label {
+  color: rgb(0, 58, 0);    
+}
+.price:not(:checked) > label:hover,
+.price:not(:checked) > label:hover ~ label {
+  color: rgb(0, 58, 0); }
+
+.price > input:checked ~ label:hover,
+.price > input:checked ~ label:hover ~ label,
+.price > label:hover ~ input:checked ~ label {
+  color: rgb(0, 58, 0); }
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 85%;
+  background:#CC6666;
+  border-radius:18px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+  [type="submit"]:hover { 
+  background:#CC4949; }
+
+  .submit{
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  }   
+
+  .check {
+    display: inline-block;
+    transform: rotate(45deg);
+    height: var(--height);
+    width: var(--width);
+    border-bottom: var(--borderWidth) solid var(--borderColor);
+    border-right: var(--borderWidth) solid var(--borderColor);
+    
+  }
+
+
+  :root {
+    --borderWidth: 7px;
+    --height: 24px;
+    --width: 12px;
+    --borderColor: #78b13f;
+  }
+
+  .bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+  }
+
+  .close{
+    position: absolute;
+    top: 0%;
+    right: 14px;
+    font-size: 32px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+  }
+
+  .button{
+  
+    border: 1px solid black;
+    border-radius: 150px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: black;
+
+  }
+
+  .button:hover{
+    background-color: rgba(119, 119, 119, 0.1);
+    color:rgba(119, 119, 119, 0.1);
+    
+  }
