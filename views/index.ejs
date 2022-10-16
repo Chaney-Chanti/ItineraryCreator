@@ -14,7 +14,7 @@
         <div class="navbar">
             <ul>
                 <li><a href="landing.html">Home</a></li>
-                <li><a href="itinerary.ejs">Itenerary</a></li>
+                <li><a href="itinerary.ejs">Itinerary</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Account</a></li>
@@ -35,7 +35,11 @@
             </form>
           <section class="mainpage">     
             <div>
-              <a href="#" onclick="openForm()" id="button" class="button">+</a>
+              <a href="#" onclick="openForm()" id="button" class="add">
+                <div>
+                <i class="fa-solid fa-plus"></i>
+                </div>
+              </a>
               <script>
                 function openForm(){
                   var x = document.getElementsByClassName('bg-modal')[0].style.display='flex';
@@ -57,7 +61,7 @@
                 <div class="addplans">How was your trip?</div>
         
                 <div class="location">
-                        <label for="loc" class="loc-id"> location</label>
+                        <label for="loc" class="loc-id"> Location</label>
                         
                         <input type="location-input" id="location" placeholder="Where?">
                 </div>

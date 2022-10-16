@@ -65,10 +65,14 @@
     cursor: pointer;
 }
 
+.search-bar button:hover{
+  border: 1px solid black;
+}
+
 .add{
   margin-left: 100px;
   height: 60px;
-  width: 30%;
+  width: 48%;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.5);
   display: flex;
@@ -79,7 +83,8 @@
 }
 
 .fa-solid.fa-plus{
-  scale: 200%;
+  scale: 150%;
+  color: black;
 }
 
 .wrapper{
@@ -91,8 +96,8 @@
 }
 
 
-button:hover{
-    border: 1px solid rgb(85, 85, 85);
+.add:hover{
+    border: 1px solid black;
 }
 
 .pop{
