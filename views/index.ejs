@@ -23,25 +23,23 @@
 
         <div class="container">
           <div class="topbar">
-            <form action="/test" method="get" class="search-bar">
-                <input type="text" placeholder="Find An Itinerary" name="q">
-                <button type="submit"><img src="../public/assets/images/search.png"></button>
-              </form>
-                <!-- <a href="" class="add">
-                <div>
-                  <i class="fa-solid fa plus"></i>
-                </div>
-              </a> -->
+            <form action="" method="get" class="search-bar" onsubmit="getSearchResult()">
+              <input type="text" id="search" placeholder="Find An Itenerary">
+              <button type="reset" id="submitButton" onclick="getSearchResult()"><img src="../public/assets/images/search.png"></button>
+              <script>
+                function getSearchResult() {
+                  var item = document.getElementById("search").value;
+                  window.location.href = '/location/' + item
+                }
+              </script>
+            </form>
           <section class="mainpage">     
             <div>
               <a href="#" onclick="openForm()" id="button" class="button">+</a>
               <script>
                 function openForm(){
-                  // document.getElementById('.bg-modal').style.display='flex';
-                          var x = document.getElementsByClassName('bg-modal')[0].style.display='flex';
-                   
+                  var x = document.getElementsByClassName('bg-modal')[0].style.display='flex';
                 }
-                
                 function closeForm(){
                   var x = document.getElementsByClassName('bg-modal')[0].style.display='none';
                 }
@@ -133,7 +131,7 @@
             </div>
             <h1 id="title">Most Popular</h1>
             <div class="wrapper">
-              <a href="/test" class="card">
+                  <a href="/itinerary" class="card">
                     <div class="card-header">
                       <img src="../public/assets/images/tokyo.jpg" alt="rover" />
                     </div>
@@ -150,7 +148,7 @@
                       </h5>
                     </div>
                   </a>
-                  <a href="/test" class="card">
+                  <a href="/itinerary" class="card">
                     <div class="card-header">
                       <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" />
                     </div>
@@ -163,11 +161,11 @@
                         <%=data[1]['description']%>
                       </p>
                       <h5>
-                        <%=data[1]['rating']%> &#9733 &#9733 &#9733 &#9733;
+                        <%=data[1]['rating']%> &#9733 &#9733 &#9733 &#9733 &#9733;
                       </h5>
                     </div>
                   </a>
-                  <a href="/test" class="card">
+                  <a href="/itinerary" class="card">
                     <div class="card-header">
                       <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
                     </div>
@@ -180,7 +178,7 @@
                         <%=data[2]['description']%>
                       </p>
                       <h5>
-                        <%=data[2]['rating']%> &#9733 &#9733 &#9733 &#9733;
+                        <%=data[2]['rating']%> &#9733 &#9733 &#9733 &#9733 &#9733;
                       </h5>
                     </div>
                   </a>
