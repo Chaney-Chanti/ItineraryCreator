@@ -17,8 +17,8 @@
       display: flex;
       margin: auto;
       position: relative;
-      width: 450px;
-      height: 400px;
+      width: 380px;
+      height: 410px;
       border-radius: 15px;
       padding: 40px;
       box-sizing: border-box;
@@ -70,7 +70,6 @@
     position: relative;
     display: inline-block;
     font-size: 15px;
-    
   }
 
   .dropdown select{
@@ -80,6 +79,7 @@
     border-radius: 7px;
     width: 100%;
     cursor: pointer;
+    align-items: center;
     
   }
 
@@ -119,17 +119,23 @@
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 1px;
+    align-items: center;
   }
   
   .mastercard{
     
     position: absolute;
-  bottom: 90px;
-  right: 60px;
+  bottom: 110px;
+  right: 45px;
   font-size: 20px;
   font-weight: 300;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  }
+
+  .options{
+    text-align: left;
+    padding: 5px;
   }
 
 .rate {
@@ -139,7 +145,7 @@
     
 }
 
-#bottomright {
+/* #bottomright {
   position: absolute;
   bottom: 100px;
   right: 40px;
@@ -176,7 +182,7 @@
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
     color: #9c3a3a;
-}
+} */
 
 
 .price {
@@ -187,10 +193,10 @@
 
 #bottomleft {
   position: absolute;
-  bottom: 150px;
-  right: 70px;
+  bottom: 165px;
+  right: 20px;
   font-size: 25px;
-  font-weight: 400;
+  
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
@@ -293,17 +299,30 @@
   }
 
   .button{
-  
+    
+    /* margin-left: 25px;
     border: 1px solid black;
-    border-radius: 150px;
+    border-radius: 100px;
     text-decoration: none;
-    padding: 10px 28px;
+    padding: 10px 25px;
     color: black;
+    font-size: 60px;   */
 
+  margin-left: 100px;
+  height: 60px;
+  width: 30%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  justify-content: center;
+  border: 0;
+  text-decoration: none;
   }
 
   .button:hover{
-    background-color: rgba(119, 119, 119, 0.1);
-    color:rgba(119, 119, 119, 0.1);
+    background-color: rgba(119, 119, 119, 0.4);
+    color:rgba(119, 119, 119, 0.4);
     
   }

@@ -52,30 +52,29 @@
           </section>
 
           <!--------------------------------------->
-
+          
           <div class="bg-modal" id="bg-modal">
             
             <div class="itenerary-container">
               
                 <div class="close" onclick="closeForm()">+</div>
                 <div class="addplans">How was your trip?</div>
-        
+              <form id="info" action="/" method="post">
                 <div class="location">
                         <label for="loc" class="loc-id"> Location</label>
                         
-                        <input type="location-input" id="location" placeholder="Where?">
+                        <input type="location-input" name="location" id="location" placeholder="Where?">
                 </div>
         
                 <div class="description-input" >
-                    <label for="description-for" id="description">Description:</label>
-                    <input type="text" placeholder="Enter description here...">
+                    <label for="description-for">Description:</label>
+                    <input  id="description" type="text" placeholder="Enter description here...">
                 </div>
         
-  
         
                 <div class="dropdown-duration">
-                    <label class="dropdown" id="duration">Duration:
-                    <select>
+                    <label class="dropdown">Duration:
+                    <select class="options" id="duration">
                         <option value="less-week">less than a week</option>
                         <option value="one-week">1 week</option>
                         <option value="two-week">2 weeks</option>
@@ -116,8 +115,9 @@
                 </div>
         
                 <div>
-                <button type="submit" class="submit">SUBMIT</button>
+                <input type="submit" value="Submit" class="submit"></input>
                 </div>
+              </form>
             </div>
             </div>
 
